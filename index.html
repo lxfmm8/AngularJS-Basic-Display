@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <link rel='stylesheet' type='text/css' href='css/main.css'></link>
+  </head>
+  <body>
+
+    <div class='titleImage'>
+      <img ng-src='images/logo003.png' height='10%' width='10%'></img>
+    </div>
+
+
+    <div class='leftMenu'>
+    <div ng-controller='projectMenuController'>
+      <button ng-click='toggleMenu()'>Toggle Menu</button>
+      <ul ng-show='menuState.show' ng-repeat='project in directory'>
+
+        <li ng-click='projectName()'>{{project.name}}</li>
+        <li ng-click='projectImage()'>{{project.image}}</li>
+        <li ng-click='projectDescription()'>{{project.description}}</li>
+
+      </ul>
+    </div>
+    </div>
+
+    <script src='js/main.js'></script>
+  </body>
+</html>
